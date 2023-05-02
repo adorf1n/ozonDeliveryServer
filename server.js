@@ -18,7 +18,7 @@ var config = {
 app.use(express.static("public"));
 app.use(bodyParser.json());
 
-//ТЕСТИРОВАНИЕ
+//СПИСОК ВСЕХ ГОРОДОВ
 app.get("/api/townlist", async (req, res) => {
   const pool = await sql.connect(config);
   let connection = new sql.ConnectionPool(config, function (err) {
